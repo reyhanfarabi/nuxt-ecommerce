@@ -73,3 +73,11 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## Credits
+
+```
+API -> https://fakestoreapi.com/docs
+
+UI Ideas -> https://dribbble.com/shots/6467671-Catalog-page-template-Avis-UI-Pack
+```
