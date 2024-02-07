@@ -5,6 +5,8 @@
       class="bg-zinc-100 p-1 rounded border border-zinc-500"
       name="category-filter"
       id="categoryFilter"
+      v-model="selectedOption"
+      @change="() => emit('selected', selectedOption)"
     >
       <option v-for="opt in props.options" class="p-2" :value="opt.value">
         {{ opt.label }}
@@ -29,4 +31,10 @@ const props = defineProps({
     required: true,
   },
 });
+
+const emit = defineEmits<{
+  (e: "selected", value: string): void;
+}>();
+
+const selectedOption = ref("");
 </script>
