@@ -26,7 +26,9 @@
               ratings)</span
             >
             <span class="text-2xl font-bold">${{ product?.price }}</span>
-            <div class="flex flex-col gap-2 border border-zinc-950 p-4">
+            <div
+              class="flex flex-col gap-2 border-t border-b border-zinc-950 py-4"
+            >
               <label class="text-sm font-bold" for="description-box"
                 >Description</label
               >
@@ -35,7 +37,7 @@
           </div>
           <div class="flex justify-end items-end h-full gap-4 pt-8">
             <AppButton> Add to Cart </AppButton>
-            <AppButton is-filled>Buy</AppButton>
+            <AppButton>Buy</AppButton>
           </div>
         </div>
       </div>
