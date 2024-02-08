@@ -1,4 +1,5 @@
 <template>
+  <Title>Our Products | E-Commerce</Title>
   <div class="flex flex-col w-full gap-4">
     <h1 class="text-4xl font-semibold">Our Products</h1>
     <div class="flex flex-row justify-end">
