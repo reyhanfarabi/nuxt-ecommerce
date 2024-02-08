@@ -35,9 +35,12 @@
               <p name="description-box">{{ product?.description }}</p>
             </div>
           </div>
-          <div class="flex justify-end items-end h-full gap-4 pt-8">
-            <AppButton> Add to Cart </AppButton>
-            <AppButton>Buy</AppButton>
+          <div class="flex justify-between items-end h-full pt-8">
+            <AppButton @click="() => navigateTo('/')"> &larr; Back </AppButton>
+            <div class="flex flex-row gap-4">
+              <AppButton>Add to Cart</AppButton>
+              <AppButton>Buy</AppButton>
+            </div>
           </div>
         </div>
       </div>
