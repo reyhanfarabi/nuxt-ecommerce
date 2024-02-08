@@ -1,4 +1,5 @@
 <template>
+  <NuxtLoadingIndicator />
   <div class="w-screen h-screen flex flex-row">
     <div class="w-[4vw] bg-zinc-950"></div>
     <div class="w-[96vw] flex flex-col">
