@@ -1,6 +1,5 @@
 <template>
-  <a
-    href="#"
+  <div
     class="flex flex-col h-[20rem] bg-white border border-gray-200 rounded-md duration-75 hover:shadow-lg"
   >
     <div class="flex justify-center h-36 w-full p-2">
@@ -17,7 +16,7 @@
       </div>
       <span class="self-end text-xl font-semibold">${{ props.price }}</span>
     </div>
-  </a>
+  </div>
 </template>
 
 <script lang="ts" setup>

@@ -12,13 +12,14 @@
       <span>Loading...</span>
     </div>
     <div v-else class="grid grid-cols-6 gap-8 h-[74vh] overflow-auto p-4">
-      <AppCard
-        v-for="product in products"
-        :name="product.title"
-        :description="product.description"
-        :price="product.price"
-        :image-url="product.image"
-      />
+      <NuxtLink v-for="product in products" :to="`/${product.id}`">
+        <AppCard
+          :name="product.title"
+          :description="product.description"
+          :price="product.price"
+          :image-url="product.image"
+        />
+      </NuxtLink>
     </div>
   </div>
 </template>
