@@ -1,24 +1,23 @@
-# Nuxt 3 Minimal Starter
+# Nuxt E-Commerce
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Checkout the deployed project on:
 
-## Setup
+- https://reyhan-nuxt-ecommerce.netlify.app/
 
-Make sure to install the dependencies:
+## Tech Stack
 
-```bash
-# npm
-npm install
+- Typescript
+- NuxtJS 3
+- TailwindCSS 3
+- Sass
 
-# pnpm
-pnpm install
+## Project Setup
 
-# yarn
-yarn install
-
-# bun
-bun install
-```
+1. `git clone` this project
+2. cd to this project
+3. configure your local .env with the api URL
+4. run `npm install` to install the dependecies
+5. run `npm run dev` to start development server
 
 ## Development Server
 
@@ -27,15 +26,6 @@ Start the development server on `http://localhost:3000`:
 ```bash
 # npm
 npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
 ## Production
@@ -45,15 +35,6 @@ Build the application for production:
 ```bash
 # npm
 npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
 
 Locally preview production build:
@@ -61,15 +42,6 @@ Locally preview production build:
 ```bash
 # npm
 npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
