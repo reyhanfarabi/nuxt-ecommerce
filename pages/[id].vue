@@ -36,10 +36,12 @@
             </div>
           </div>
           <div class="flex justify-between items-end h-full pt-8">
-            <AppButton @click="() => navigateTo('/')"> &larr; Back </AppButton>
+            <v-btn @click="() => navigateTo('/')" variant="outlined"
+              >&larr; Back</v-btn
+            >
             <div class="flex flex-row gap-4">
-              <AppButton>Add to Cart</AppButton>
-              <AppButton>Buy</AppButton>
+              <v-btn flat variant="outlined">Add to Cart</v-btn>
+              <v-btn flat color="grey-darken-4">Buy</v-btn>
             </div>
           </div>
         </div>
