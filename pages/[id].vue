@@ -18,7 +18,7 @@
             toCapitalize(product?.category || "")
           }}</span>
           <div class="flex flex-col gap-4">
-            <h1 class="text-4xl">{{ product?.title }}</h1>
+            <h1 class="text-4xl font-bold">{{ product?.title }}</h1>
             <span
               >{{ product?.rating.rate.toFixed(1) }} ({{
                 product?.rating.count
