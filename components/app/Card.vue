@@ -1,22 +1,18 @@
 <template>
-  <div
-    class="flex flex-col h-[20rem] bg-white border border-gray-200 rounded-md duration-75 hover:shadow-lg"
-  >
-    <div class="flex justify-center h-36 w-full p-2">
-      <img class="h-full" :src="imageUrl" :alt="`${name} product image`" />
-    </div>
-    <div class="flex flex-col justify-between h-full p-4">
-      <div class="flex flex-col h-24 justify-end gap-2">
-        <h3 class="text-sm font-bold break-words line-clamp-2">
-          {{ props.name }}
-        </h3>
-        <span class="text-sm break-words line-clamp-2"
-          >{{ props.description }}
-        </span>
-      </div>
-      <span class="self-end text-xl font-semibold">${{ props.price }}</span>
-    </div>
-  </div>
+  <v-card class="mx-auto" max-width="400" hover>
+    <v-img height="140" :src="props.imageUrl" />
+
+    <v-card-title class="text-wrap"
+      ><h1 class="line-clamp-2 font-bold text-sm h-10">
+        {{ props.name }}
+      </h1></v-card-title
+    >
+
+    <v-card-text class="flex flex-col gap-4">
+      <p class="line-clamp-2">{{ props.description }}</p>
+      <span class="self-end text-lg font-bold">${{ props.price }}</span>
+    </v-card-text>
+  </v-card>
 </template>
 
 <script lang="ts" setup>
