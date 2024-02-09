@@ -8,7 +8,7 @@
           class="flex justify-center items-center h-96 w-96 p-4 border border-gray-200 rounded-md"
         >
           <img
-            class="h-full"
+            class="h-full w-full object-contain"
             :src="product?.image"
             :alt="`${product?.title} product image`"
           />
