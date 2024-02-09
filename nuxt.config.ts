@@ -1,7 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  css: ["~/assets/css/main.css"],
+  css: [
+    "~/assets/css/main.css",
+    "vuetify/lib/styles/main.sass",
+    "@mdi/font/css/materialdesignicons.min.css",
+  ],
   imports: {
     dirs: ["types/*.ts", "types/**/*.ts"],
   },
@@ -14,6 +18,14 @@ export default defineNuxtConfig({
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
+    },
+  },
+  build: {
+    transpile: ["vuetify"],
+  },
+  vite: {
+    define: {
+      "process.env.DEBUG": false,
     },
   },
 });
