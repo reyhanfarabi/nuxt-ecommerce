@@ -2,7 +2,7 @@
   <Title>{{ `${product?.title} - Product Detail` || "Product Detail" }}</Title>
   <div class="flex flex-col items-center w-full">
     <div class="flex flex-col container gap-4 px-36">
-      <AppBreadcrumb :links="breadcrumbLinks" />
+      <v-breadcrumbs :items="breadcrumbLinks"></v-breadcrumbs>
       <div class="flex flex-row gap-10">
         <div
           class="flex justify-center items-center h-96 w-96 p-4 border border-gray-200 rounded-md"
@@ -49,7 +49,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { IBreadcrumbItem } from "~/components/app/Breadcrumb.vue";
+import type { BreadcrumbItem } from "~/types/vuetifyComponents";
 import type { IProduct } from "~/types/product";
 
 const config = useRuntimeConfig();
@@ -59,8 +59,12 @@ const { data: product } = await useFetch<IProduct>(
   `${config.public.apiUrl}/products/${route.params.id}`
 );
 
-const breadcrumbLinks: Array<IBreadcrumbItem> = [
-  { label: "Products", to: "/" },
-  { label: product.value?.title || "" },
+const breadcrumbLinks: Array<BreadcrumbItem> = [
+  { title: "Products", disabled: false, href: "/" },
+  {
+    title: product.value?.title || "",
+    disabled: true,
+    href: `${route.params.id}`,
+  },
 ];
 </script>
