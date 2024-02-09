@@ -15,7 +15,7 @@ Checkout the deployed project on:
 
 1. `git clone` this project
 2. cd to this project
-3. configure your local .env with the api URL
+3. configure `.env` file with the api URL
 4. run `npm install` to install the dependecies
 5. run `npm run dev` to start development server
 
