@@ -20,7 +20,11 @@
       <span>Loading...</span>
     </div>
     <div v-else class="grid grid-cols-6 gap-8 h-[70vh] overflow-auto p-4">
-      <NuxtLink v-for="product in products" :to="`/${product.id}`">
+      <NuxtLink
+        class="h-fit w-fit"
+        v-for="product in products"
+        :to="`/${product.id}`"
+      >
         <AppCard
           :name="product.title"
           :description="product.description"
