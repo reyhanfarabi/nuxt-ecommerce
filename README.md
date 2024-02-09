@@ -2,7 +2,7 @@
 
 Checkout the deployed project on:
 
-- https://reyhan-nuxt-ecommerce.netlify.app/
+- https://main-with-vuetify--reyhan-nuxt-ecommerce.netlify.app/
 
 ## Tech Stack
 
