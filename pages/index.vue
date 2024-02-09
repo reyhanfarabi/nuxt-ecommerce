@@ -3,16 +3,23 @@
   <div class="flex flex-col w-full gap-4">
     <h1 class="text-4xl font-semibold">Our Products</h1>
     <div class="flex flex-row justify-end">
-      <AppDropdown
-        label="Category"
-        :options="categoriesOptions"
-        @selected="setSelectedCategory"
-      />
+      <div class="flex w-60">
+        <v-select
+          label="Category"
+          :items="categoriesOptions"
+          item-title="label"
+          width="100px"
+          item-value="value"
+          density="compact"
+          v-model="currentCategory"
+          @update:model-value="() => refresh()"
+        ></v-select>
+      </div>
     </div>
-    <div v-if="pending" class="flex justify-center items-center h-[74vh]">
+    <div v-if="pending" class="flex justify-center items-center h-[70vh]">
       <span>Loading...</span>
     </div>
-    <div v-else class="grid grid-cols-6 gap-8 h-[74vh] overflow-auto p-4">
+    <div v-else class="grid grid-cols-6 gap-8 h-[70vh] overflow-auto p-4">
       <NuxtLink v-for="product in products" :to="`/${product.id}`">
         <AppCard
           :name="product.title"
@@ -26,7 +33,6 @@
 </template>
 
 <script lang="ts" setup>
-import type { IDropdownOptions } from "~/components/app/Dropdown.vue";
 import type { IProduct } from "~/types/product";
 
 const config = useRuntimeConfig();
@@ -47,20 +53,16 @@ const { data: categories } = await useFetch<Array<string>>(
   `${config.public.apiUrl}/products/categories`
 );
 
-const categoriesOptions: ComputedRef<Array<IDropdownOptions>> = computed(
-  (): Array<IDropdownOptions> => [
-    { label: "All", value: "" },
-    ...(categories.value
-      ? categories.value.map((category) => ({
-          label: toCapitalize(category),
-          value: category,
-        }))
-      : []),
-  ]
-);
-
-const setSelectedCategory = (value: string): void => {
-  currentCategory.value = value;
-  refresh();
-};
+const categoriesOptions: ComputedRef<Array<{ label: string; value: string }>> =
+  computed(
+    (): Array<{ label: string; value: string }> => [
+      { label: "All", value: "" },
+      ...(categories.value
+        ? categories.value.map((category) => ({
+            label: toCapitalize(category),
+            value: category,
+          }))
+        : []),
+    ]
+  );
 </script>
