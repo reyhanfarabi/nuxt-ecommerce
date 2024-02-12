@@ -12,7 +12,7 @@
     <div v-if="pending" class="flex justify-center items-center h-[74vh]">
       <span>Loading...</span>
     </div>
-    <div v-else class="grid grid-cols-6 gap-8 h-[74vh] overflow-auto p-4">
+    <div v-else class="grid grid-cols-5 gap-10 h-[74vh] overflow-auto p-4">
       <NuxtLink v-for="product in products" :to="`/${product.id}`">
         <AppCard
           :name="product.title"

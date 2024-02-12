@@ -1,20 +1,19 @@
 <template>
-  <div
-    class="flex flex-col h-[20rem] bg-white border border-gray-200 rounded-md duration-75 hover:shadow-lg"
-  >
-    <div class="flex justify-center h-36 w-full p-2">
-      <img class="h-full" :src="imageUrl" :alt="`${name} product image`" />
+  <div class="flex flex-col relative h-[20rem] bg-white group">
+    <div class="h-64 w-64 p-4 border duration-75 group-hover:border-zinc-950">
+      <img
+        class="h-full w-full object-contain"
+        :src="imageUrl"
+        :alt="`${name} product image`"
+      />
     </div>
-    <div class="flex flex-col justify-between h-full p-4">
-      <div class="flex flex-col h-24 justify-end gap-2">
-        <h3 class="text-sm font-bold break-words line-clamp-2">
-          {{ props.name }}
-        </h3>
-        <span class="text-sm break-words line-clamp-2"
-          >{{ props.description }}
-        </span>
-      </div>
-      <span class="self-end text-xl font-semibold">${{ props.price }}</span>
+    <h3 class="text-sm font-bold break-words w-52 px-2 mt-2 line-clamp-2">
+      {{ props.name }}
+    </h3>
+    <div
+      class="absolute flex justify-center items-center h-16 w-16 right-6 bottom-8 bg-yellow-400 duration-75 group-hover:bg-zinc-950 group-hover:border-zinc-950 group-hover:text-yellow-400"
+    >
+      <span class="text-sm font-semibold">${{ props.price }}</span>
     </div>
   </div>
 </template>
