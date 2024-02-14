@@ -1,8 +1,8 @@
 <template>
-  <div class="flex flex-row items-center gap-2">
+  <div class="flex flex-row relative items-center gap-2">
     <label class="text-sm" for="category-filter">{{ props.label }}</label>
     <select
-      class="bg-zinc-100 p-1 rounded border border-zinc-500"
+      class="bg-white p-1 border border-zinc-500 px-2 w-48"
       name="category-filter"
       id="categoryFilter"
       v-model="selectedOption"
@@ -12,6 +12,10 @@
         {{ opt.label }}
       </option>
     </select>
+    <Icon
+      name="heroicons:chevron-down"
+      class="absolute right-2 pointer-events-none"
+    />
   </div>
 </template>
 
@@ -38,3 +42,10 @@ const emit = defineEmits<{
 
 const selectedOption = ref("");
 </script>
+
+<style scoped>
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+</style>
