@@ -11,7 +11,7 @@
       {{ props.name }}
     </h3>
     <div
-      class="absolute flex justify-center items-center h-16 w-16 left-56 bottom-8 bg-yellow-400 duration-75 group-hover:bg-zinc-950 group-hover:border-zinc-950 group-hover:text-yellow-400"
+      class="absolute flex justify-center items-center h-16 w-16 left-56 bottom-8 bg-yellow-400 duration-75 group-hover:bg-zinc-950 group-hover:border-zinc-950 group-hover:text-white"
     >
       <span class="text-sm font-semibold">${{ props.price }}</span>
     </div>
